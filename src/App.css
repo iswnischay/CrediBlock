@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.ppp {
+  font-size: 21px;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+
+.hhh{
+  font-family: 'Orbitron', sans-serif;
+  
+}
+
+
+nav .ref{
+  
+  color:rgb(34, 37, 37);
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 50px;
+  margin-top: 25px;
+  font-size: 25px;
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+nav .ref{
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  text-decoration: none;
+}
+nav .ref:focus,
+nav .ref:hover {
+color: black;
+}
+
+nav .ref:focus:after,
+nav .ref:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+nav .ref:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color:black;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
