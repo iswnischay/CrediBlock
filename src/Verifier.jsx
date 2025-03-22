@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 
 const Verifier = () => {
   const [fileName, setFileName] = useState("");
@@ -55,7 +56,9 @@ const Verifier = () => {
 
   return (
     <div className="container mt-4">
-      <h2>Verifier</h2>
+      <h2 className="hhh">Verifier</h2>
+      <br></br>
+
       <input type="file" className="form-control mb-3" onChange={handleFileChange} />
       {fileName && <p><strong>File:</strong> {fileName}</p>}
       <div className="mb-3">
@@ -67,9 +70,12 @@ const Verifier = () => {
           onChange={(e) => setInputCode(e.target.value)}
         />
       </div>
+      <br></br>
+      
       <button className="btn btn-primary" onClick={handleVerify}>
         Verify
       </button>
+      
       {verificationAttempted && matchDetails ? (
         <div className="alert alert-success mt-3">
           <strong>File/User Verified!</strong>

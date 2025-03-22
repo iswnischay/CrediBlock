@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./App.css";
 const Issuer = () => {
   const [issuerName, setIssuerName] = useState("");
   const [studentName, setStudentName] = useState("");
@@ -69,8 +69,8 @@ const Issuer = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>ISSUER</h2>
+    <div className="container mt-4" >
+      <h2 className="hhh">ISSUER</h2>
       <br />
       <input
         type="text"
@@ -119,21 +119,27 @@ const Issuer = () => {
       </button>
 
       {successMessage && (
-        <div className="mt-3 p-3 bg-light-green" style={{ backgroundColor: '#e8f5e9', border: '1px solid #a5d6a7' }}>
-          <p><strong>Success!</strong> Certificate details saved.</p>
-          <table className="table table-bordered">
-            <tbody>
-              <tr>
-                <td><strong>Unique Code:</strong></td>
-                <td>{successMessage.code}</td>
-              </tr>
-              <tr>
-                <td><strong>Hash:</strong></td>
-                <td>{successMessage.hash}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div className="alert alert-success mt-3">
+  <strong>Success!</strong> Certificate details saved.
+  <table className="table mt-3">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unique Code</td>
+        <td>{successMessage.code}</td>
+      </tr>
+      <tr>
+        <td>Hash</td>
+        <td>{successMessage.hash}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
       )}
     </div>
   );
