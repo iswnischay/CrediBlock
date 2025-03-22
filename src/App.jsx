@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Issuer from "./Issuer";
 import Verifier from "./Verifier";
@@ -23,7 +23,6 @@ const App = () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
-      // Immediately apply the theme to the html element
       document.getElementById("root-html").setAttribute("data-bs-theme", savedTheme);
     } else {
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
